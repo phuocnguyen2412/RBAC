@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  my-sql:
+    image: mysql:8.0
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: library_management
+    volumes:
+      - ./data/mysql:/var/lib/mysql
